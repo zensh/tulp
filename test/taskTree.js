@@ -1,13 +1,13 @@
-'use strict';
+'use strict'
 
-var taskTree = require('../lib/taskTree');
-var should = require('should');
+var taskTree = require('../lib/taskTree')
+var should = require('should')
 
-require('mocha');
+require('mocha')
 
-describe('taskTree()', function() {
-  it('should form a tree properly', function(done) {
-    should.exist(taskTree); // Lol shutup jshint
+describe('taskTree()', function () {
+  it('should form a tree properly', function (done) {
+    should.exist(taskTree) // Lol shutup jshint
 
     var tasks = {
       test: {
@@ -19,7 +19,7 @@ describe('taskTree()', function() {
       def: {
         dep: [],
       },
-    };
+    }
 
     var expectTree = {
       nodes: [
@@ -34,9 +34,9 @@ describe('taskTree()', function() {
           nodes: [],
         },
       ],
-    };
+    }
 
-    taskTree(tasks).should.eql(expectTree);
-    done();
-  });
-});
+    taskTree(tasks).should.eql(expectTree)
+    done()
+  })
+})
